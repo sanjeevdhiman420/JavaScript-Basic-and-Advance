@@ -1,8 +1,14 @@
 const newspaperSpinning = [
-    // { transform: 'rotate(0) scale(1)' },
-    // { transform: 'rotate(360deg) scale(0)' },
+     { transform: 'rotate(0) scale(1)' },
+     { transform: 'rotate(360deg) scale(0)' },
     { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
+  { transform: 'translateY(-300px)' },
+  { transform: 'translateY(0px)' },
+  { transform: 'translateY(300px)' },
+  { transform: 'translateX(0px)' },
+  { transform: 'translateX(-300px)' },
+  { transform: 'translateX(0px)' },
+  { transform: 'translateX(300px)' }
    ];
 
   const newspaperTiming = {

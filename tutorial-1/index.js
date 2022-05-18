@@ -62,7 +62,15 @@ var arr = [
       "five" : fivth,
   }
 ];
-
+//
+let  arr = [1,2,3,4,5,6];
+//console.table(arr);
+//
+const obj1 = {first:"name", second:"middle name", third:"last name"};
+//console.log('%c hey world' , 'color:red;', 'font-weight:bold;');
+//
+const obj2 = {first:"name", second:"middle name", third:"last name"};
+//console.log({obj2});
 
 
 
