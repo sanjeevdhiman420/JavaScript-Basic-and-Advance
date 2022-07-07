@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubbles</title>
+</head>
+<style>
+    .root span {
+        position: absolute;
+        bottom: -10px;
+        border-radius: 50%;
+        pointer-events: none;
+        box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+        animation: animate 4s linear infinite;
+        background-color: pink;
+    }
+    .root span:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.25) translate(-70%, -70%);
+    background: radial-gradient(#fff, transparent);
+    border-radius: 50%;
+    }
+    .root {
+        background: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+    }
+    @keyframes animate {
+        0%{
+            transform: translateY(0%);
+            opacity: 1;
+            background-color: aqua;
+        }
+        50%{
+            transform: translateY(-600%);
+            opacity: 1;
+            background-color: red;
+        }
+        100%{
+transform: translateY(-1200%);
+background-color: aliceblue;
+opacity: 1;
+        }
+    }
+    h2 {
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        color: red;
+    }
+</style>
+<body>
+    <div class="root">
+        <h2>Bubbles Transformation</h2>
+    </div>
+    <script>
+        function createBubble(){
+            let root = document.querySelector("div.root");
+        let bubble = document.createElement("span");
+        let size = Math.random() * 60;
+        bubble.style.width = size + "px";
+        bubble.style.height = size + "px";
+        bubble.style.left = Math.random() * innerWidth + "px";
+        root.appendChild(bubble);
+        setTimeout(()=>{
+            createBubble.remove(),4000
+        })
+        }
+        setInterval(createBubble,50)
+
+    </script>
+</body>
+</html>
